@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Enkel-Digital/template.git"
+    "url": "git+https://github.com/Enkel-Digital/node-express-template.git"
   },
   "author": "JJ",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Enkel-Digital/template/issues"
+    "url": "https://github.com/Enkel-Digital/node-express-template/issues"
   },
-  "homepage": "https://github.com/Enkel-Digital/template#readme",
+  "homepage": "https://github.com/Enkel-Digital/node-express-template#readme",
   "dependencies": {
     "@enkeldigital/ce-sql": "^0.1.0",
     "@lionellbriones/logging": "^3.2.1",
