@@ -41,7 +41,7 @@ GET {{host}}/user/social@enkeldigital.com
 {{authHeader}}
 
 ### Example POST with auth header and body
-POST {{host}}/data/save
+POST {{host}}/submit
 {{authHeader}}
 content-type: application/json
 

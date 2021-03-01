@@ -13,6 +13,7 @@ const app = express();
 const helmet = require("helmet");
 const compression = require("compression");
 const cors = require("cors");
+const { _404, _500 } = require("express-error-middlewares");
 
 const createLogger = require("@lionellbriones/logging").default;
 const logger = createLogger("index.js:Server Setup");
@@ -57,9 +58,9 @@ async function setup(resolve) {
    */
   app.use("/", require("./routes"));
 
-  // Mount the 404 route and error handling middleware last
-  app.use(require("./middleware/404"));
-  app.use(require("./middleware/500"));
+  // Mount the 404 and 500 error handling middleware last
+  app.use(_404);
+  app.use(_500);
 
   /**
    * @notice Setup PORT and timeout last to ensure all setup is done before server starts listening to traffic

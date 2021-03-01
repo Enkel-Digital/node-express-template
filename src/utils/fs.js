@@ -4,5 +4,4 @@
  * @module DB singleton
  */
 
-const admin = require("./firebaseAdmin");
-module.exports = admin.firestore();
+module.exports = require("@enkeldigital/firebase-admin").firestore();

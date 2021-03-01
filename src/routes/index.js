@@ -2,9 +2,13 @@
 const express = require("express");
 const router = express.Router();
 
-const auth = require("../middleware/auth");
+const firebaseAdmin = require("@enkeldigital/firebase-admin");
+const authMiddleware = require("firebase-auth-express-middleware")(
+  firebaseAdmin
+);
 
 // Mount all the routes onto their respective base routes
 router.use("/", require("./default"));
+router.use("/", authMiddleware, require("./demo"));
 
 module.exports = router;
